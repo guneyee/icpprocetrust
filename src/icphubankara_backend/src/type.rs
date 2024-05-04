@@ -1,16 +1,17 @@
-use candid::{CandidType, Deserialize, Principal};
+// types.rs
 
-
-#[derive(Clone, Copy, Debug, Default, CandidType, Deserialize, PartialEq, PartialOrd)]
-
-pub struct TodoStorage {
-    pub description: String,
-    pub done: bool
+// Donation Place data structure
+#[derive(Debug)]
+pub struct DonationPlace {
+    pub id: usize,
+    pub name: String,
+    pub location: String,
 }
 
-#[derive(Clone, Copy, Debug, Default, CandidType, Deserialize, PartialEq, PartialOrd)]
-
-pub struct Todo {
-    pub description: String,
-    pub done: bool
+// User data structure
+#[derive(Debug)]
+pub struct User {
+    pub id: usize,
+    pub name: String,
+    pub donated_amount: usize,
 }
